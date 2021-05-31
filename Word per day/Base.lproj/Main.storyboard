@@ -8,23 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="2pt-Ak-Orl">
-            <objects>
-                <viewController id="UiT-yB-Bld" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JpH-Wq-6AB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="YLE-ds-2OR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="hEd-Zs-dl7"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PZN-Bs-EFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="372" y="-198"/>
-        </scene>
-        <!--Item 1-->
+        <!--Add word-->
         <scene sceneID="XBB-Ks-blL">
             <objects>
                 <viewController id="ccJ-z8-GKc" sceneMemberID="viewController">
@@ -34,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="0ZT-KM-W1r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="UGD-rQ-k4P"/>
+                    <tabBarItem key="tabBarItem" title="Add word" image="pencil" catalog="system" id="UGD-rQ-k4P"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BuO-pi-5xU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,15 +35,65 @@
                     </tabBar>
                     <connections>
                         <segue destination="ccJ-z8-GKc" kind="relationship" relationship="viewControllers" id="7sb-xh-hdw"/>
-                        <segue destination="UiT-yB-Bld" kind="relationship" relationship="viewControllers" id="ixw-LX-9Aj"/>
+                        <segue destination="B7o-bG-eO8" kind="relationship" relationship="viewControllers" id="6da-ek-9ds"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xIy-G5-fez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1070" y="133"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="URc-oU-mBN">
+            <objects>
+                <tableViewController id="aFU-Ck-Flo" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1fm-2g-qLh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1CW-U4-Cxp">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1CW-U4-Cxp" id="aVH-rv-nZ7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aFU-Ck-Flo" id="4fg-DZ-paf"/>
+                            <outlet property="delegate" destination="aFU-Ck-Flo" id="Jng-uu-0TQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="4df-Ur-KhI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QWA-Rd-gch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318.840579710145" y="-325.44642857142856"/>
+        </scene>
+        <!--Words-->
+        <scene sceneID="TZY-14-Iyn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B7o-bG-eO8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Words" image="book.fill" catalog="system" id="A6k-GP-F1b"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Inm-si-gmC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aFU-Ck-Flo" kind="relationship" relationship="rootViewController" id="zoA-rX-AbK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wc7-zf-GPo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408.69565217391306" y="-325.44642857142856"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
