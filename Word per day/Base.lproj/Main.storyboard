@@ -65,11 +65,98 @@
                             <outlet property="delegate" destination="aFU-Ck-Flo" id="Jng-uu-0TQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="4df-Ur-KhI"/>
+                    <navigationItem key="navigationItem" id="4df-Ur-KhI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2GW-mb-kjZ">
+                            <connections>
+                                <segue destination="9nw-GX-Nol" kind="show" id="pXA-Vt-496"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWA-Rd-gch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1318.840579710145" y="-325.44642857142856"/>
+        </scene>
+        <!--Add word-->
+        <scene sceneID="gt2-Hr-HCB">
+            <objects>
+                <tableViewController id="eFj-2p-DJR" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0gh-XR-OLT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="New word" id="xYR-CI-8Lb">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="e39-8v-7FC">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e39-8v-7FC" id="ehr-4X-n7W">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s6U-Q1-L8V">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Translation" id="V63-hl-2qP">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rTp-3A-uJQ">
+                                        <rect key="frame" x="0.0" y="155" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rTp-3A-uJQ" id="a6L-Gq-5ak">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JSG-Ou-x6U">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="eFj-2p-DJR" id="TF7-bF-kYb"/>
+                            <outlet property="delegate" destination="eFj-2p-DJR" id="gJa-RQ-iOe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add word" id="8Hi-kI-wMC">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="qMb-Fr-8rQ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="wqd-Gl-GEj"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8to-Y5-LD7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3047.826086956522" y="-210.26785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="76e-ab-Umz">
+            <objects>
+                <navigationController id="9nw-GX-Nol" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Cc8-6g-ybf"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yaB-ER-WnU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eFj-2p-DJR" kind="relationship" relationship="rootViewController" id="c8E-Zz-hBz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rGS-NM-b1C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2241" y="-210"/>
         </scene>
         <!--Words-->
         <scene sceneID="TZY-14-Iyn">
